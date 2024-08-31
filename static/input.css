@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    font-family: "Lato", sans-serif;
+    font-style: normal;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input, textarea, button{
+    padding: .3rem 1rem;
+    display: block;
+    font-size: 1rem;
+    background-color: #485461;
+    border: none;
+    border-radius: 12px;
+}
+
+button{
+    padding: .3rem 1rem;
+    transition: all ease-in-out 300ms;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    gap: 1rem 2rem;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+}

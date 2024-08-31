@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="personal-info">
+      <div class="avatar">
+        <img src="{{url}}" height="200px" alt="" />
+      </div>
+      <div class="personal-data">
+        <h2>{{ data[1] }} {{ data[2] }}</h2>
+        <h3>{{ data[7] }}</h3>
+        <div class="about">{{data[6]}}</div>
+        <div class="about">{{data[9]}}</div>
+        <div class="image">
+          <img src="{{langurl}}" height="200px" alt="Image" />
+        </div>
+      </div>
+    </div>
+
+    <div class="posts">
+      <div class="linkedin-posts">
+        <h2>Linked In Posts</h2>
+        <div class="li-post-arena">
+          {% for linked in linkedin %}
+          <div class="post">
+            <div class="post-data">{{ linked.commentary.text.text }}</div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="github-posts">
+        <h2>Github Projects</h2>
+        <div class="li-post-arena">
+          {% for git in githubData %}
+          <div class="post">
+            <h3>{{ git.name }}</h3>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

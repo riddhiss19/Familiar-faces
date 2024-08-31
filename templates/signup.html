@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='input.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Signup for F <sup>2</sup></h1>
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="form">
+        <input type="text" name="first_name" placeholder="Enter First Name" />
+        <input type="text" name="last_name" placeholder="Enter Last Name" />
+        <input type="password" name="password" placeholder="Enter Password" />
+        <input type="file" name="image" id="" placeholder="Add your file" />
+        <input
+          type="text"
+          name="linked_url"
+          id=""
+          placeholder="Enter Linked In Account"
+        />
+        <input
+          type="text"
+          name="git_url"
+          id=""
+          placeholder="Enter Github Account"
+        />
+        <input type="date" name="dob" placeholder="Enter Date of Birth" />
+        <textarea
+          name="about_user"
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Something about you..."
+        ></textarea>
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

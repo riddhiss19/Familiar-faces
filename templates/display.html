@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="ls">
+      <div class="persona-data">
+        <div class="image">
+          <img src="{{url}}" height="200px" alt="" srcset="" />
+        </div>
+        <div class="persona-subs">
+          <h2>{{data[1]}}</h2>
+          <h3>{{data[7]}}</h3>
+        </div>
+      </div>
+      <div class="persona-stats">
+        <h2>Know About Me</h2>
+        <h3>Location : {{data[10]}}</h3>
+        <h3>Expertise : {{data[11]}}</h3>
+        <div class="languages">
+          <h2>Languages Know</h2>
+          <div class="lang-img"><img src="{{langurl}}" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <div class="rs">
+      <div class="persona-summary">
+        <h2>Persona Summary</h2>
+        <div class="summary">{{data[9]}}</div>
+      </div>
+      <div class="posts">
+        <div class="posts-arena">
+          <h2>Linked In Post</h2>
+          <div class="post-list">
+            {% for linked in linkedin %}
+            <div class="post">{{ linked.commentary.text.text }}</div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="posts-arena github-posts">
+          <h2>Github Post</h2>
+          <div class="post-list">
+            {% for git in githubData %}
+            <div class="post">{{ git.name }}</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
